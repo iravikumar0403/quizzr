@@ -1,4 +1,5 @@
-import { Homepage, Navbar, Footer } from "./components";
+import { Navbar, Footer } from "./components";
+import { Homepage } from "./pages";
 
 const App = () => {
   return (
