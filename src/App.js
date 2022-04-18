@@ -1,19 +1,14 @@
-import { gql, useQuery } from "@apollo/client";
+import { Navbar, Footer } from "./components";
+import { Homepage } from "./pages";
+
 const App = () => {
-  const FORM_QUERY = gql`
-    query MyQuery {
-      quizzr_quizzes {
-        questions_aggregate {
-          aggregate {
-            count
-          }
-        }
-      }
-    }
-  `;
-  const { loading, data, error } = useQuery(FORM_QUERY);
-  console.log(loading, data, error?.graphQLErrors, error?.networkError);
-  return <div>Hello</div>;
+  return (
+    <>
+      <Navbar />
+      <Homepage />
+      <Footer />
+    </>
+  );
 };
 
 export default App;
