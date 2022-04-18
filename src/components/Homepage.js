@@ -11,9 +11,9 @@ export const Homepage = () => {
           Explore quizzes
         </Link>
       </div>
-      <div>
+      <div className="m-5">
         <img
-          className="img"
+          className="img img-responsive"
           src="https://img.freepik.com/free-vector/hand-drawn-people-asking-questions_52683-60048.jpg?size=626&ext=jpg"
           alt="quiz"
         />
