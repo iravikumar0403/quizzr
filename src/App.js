@@ -1,11 +1,13 @@
+import { useRoutes } from "react-router-dom";
 import { Navbar, Footer } from "./components";
-import { Homepage } from "./pages";
+import { routes } from "./config/routes-config";
 
 const App = () => {
+  const routesElement = useRoutes(routes);
   return (
     <>
       <Navbar />
-      <Homepage />
+      {routesElement}
       <Footer />
     </>
   );
