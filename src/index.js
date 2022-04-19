@@ -6,6 +6,7 @@ import { ApolloProvider } from "@apollo/client";
 import { client } from "./config/apollo-config";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
+import { QuizProvider } from "./context/QuizContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,7 +14,9 @@ root.render(
     <ApolloProvider client={client}>
       <BrowserRouter>
         <ThemeProvider>
-          <App />
+          <QuizProvider>
+            <App />
+          </QuizProvider>
         </ThemeProvider>
       </BrowserRouter>
     </ApolloProvider>

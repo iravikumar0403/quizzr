@@ -1,17 +1,11 @@
-import React from "react";
-import { QuizCard } from "../components/QuizCard";
-import { useQuizCategories } from "../hooks/useQuizCategories";
+import { Loader, QuizCard } from "../components";
+import { useQuizCategories } from "../hooks";
 
 export const QuizCategories = () => {
   const { loading, data, error } = useQuizCategories();
   console.log(loading, data, error);
 
-  if (loading)
-    return (
-      <main className="main">
-        <div className="loader"></div>
-      </main>
-    );
+  if (loading) return <Loader />;
   return (
     <main className="main">
       <div>
@@ -19,7 +13,7 @@ export const QuizCategories = () => {
       </div>
       <div className="categories-container">
         {data.map((quiz) => (
-          <QuizCard quiz={quiz} />
+          <QuizCard quiz={quiz} key={quiz.id} />
         ))}
       </div>
     </main>

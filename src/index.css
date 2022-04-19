@@ -1,7 +1,15 @@
 @import url(./loader.css);
+
+body {
+  --loader-color: #212121;
+}
+
 body.dark {
   --primary-text: #f0f0f0;
-  --background-primary: #212121;
+  --background-primary: #353535;
+  --loader-color: #ffffff;
+  --danger-color: #ff4a4a;
+  --success-color: #1ba371;
 }
 
 .logo {
