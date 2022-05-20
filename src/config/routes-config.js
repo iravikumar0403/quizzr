@@ -1,5 +1,4 @@
-import { QuizCategories } from "../pages";
-import { Homepage } from "../pages/Homepage";
+import { Homepage, Quiz, QuizCategories, Rules, Results } from "../pages";
 
 export const routes = [
   {
@@ -9,5 +8,17 @@ export const routes = [
   {
     path: "/quizzes",
     element: <QuizCategories />,
+  },
+  {
+    path: "/rules",
+    element: <Rules />,
+  },
+  {
+    path: "/quiz/:id",
+    element: <Quiz />,
+  },
+  {
+    path: "/results",
+    element: <Results />,
   },
 ];

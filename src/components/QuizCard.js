@@ -14,7 +14,11 @@ export const QuizCard = ({ quiz }) => {
       </div>
       <div className="card-footer">
         <small>{no_of_questions} Questions</small>
-        <Link to={`/quiz/${id}`} className="btn primary">
+        <Link
+          to="/rules"
+          state={{ next: `/quiz/${id}` }}
+          className="btn primary"
+        >
           Start quiz
         </Link>
       </div>
