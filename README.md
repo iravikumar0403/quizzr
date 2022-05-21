@@ -1,4 +1,5 @@
 # Quizzr
+A quiz web app with different categories.
 
 ### Tech:
 
